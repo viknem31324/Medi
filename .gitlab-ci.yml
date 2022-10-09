@@ -1,0 +1,13 @@
+variables:
+  GIT_DEPTH: 3
+
+stages:
+  - deploy-to-docker-test
+
+#============================|
+# Деплой на тест             |
+#============================|
+
+include:
+  - project: 'devops/pipelines'
+    file: 'Gulp.gitlab-ci.yml'

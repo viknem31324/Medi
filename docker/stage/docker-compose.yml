@@ -1,0 +1,33 @@
+version: "3.5"
+
+services:
+  # NGINX container with proxy
+  nginx-app: &nginx-service-template
+    image: cr.yandex/crpu8vc7rm5vioj7h43n/kokoc/nginx-proxy:1.21.6
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "5m"
+    container_name: "${COMPOSE_PROJECT_NAME}-nginx"
+    restart: on-failure
+    command: [sh, -c, "sh /nginx-entrypoint.sh && nginx"]
+    volumes:
+      - ./../../:/app:ro
+      - ./nginx/site.conf.tpl:/etc/nginx/conf.d/site.conf.tpl:rw
+      - ./nginx/nginx-entrypoint.sh:/nginx-entrypoint.sh
+    networks:
+      - frontend-network
+    environment:
+      ROOT_DIR: /app/dist
+      VIRTUAL_HOST: ${DOMAIN}
+      LETSENCRYPT_HOST: ${DOMAIN}
+    # ports:
+    #   - "${PORT}:80"
+
+networks:
+  frontend-network:
+    external:
+      name: ${FRONTEND_NETWORK_NAME:-frontend-network}
+   
+  

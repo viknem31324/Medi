@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  &node-service node:
+    image: cr.yandex/crpu8vc7rm5vioj7h43n/kokoc/node:14-gulp-latest
+    container_name: ${COMPOSE_PROJECT_NAME}-node
+    working_dir: /app
+    volumes:
+      - ./../../:/app:rw
+    restart: on-failure
+ 

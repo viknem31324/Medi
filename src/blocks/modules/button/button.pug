@@ -1,0 +1,6 @@
+mixin Button(props = {})
+  - size = props.size || 'medium'
+  - mode = props.mode || 'primary'
+  button(class=`storybook-button storybook-button--${size} storybook-button--${mode}`)
+    block
+    
