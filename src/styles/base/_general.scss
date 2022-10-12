@@ -17,22 +17,22 @@ div {
 }
 
 *::-webkit-input-placeholder {
-  color: #666;
+  // color: #666;
   opacity: 1;
 }
 
 *:-moz-placeholder {
-  color: #666;
+  // color: #666;
   opacity: 1;
 }
 
 *::-moz-placeholder {
-  color: #666;
+  // color: #666;
   opacity: 1;
 }
 
 *:-ms-input-placeholder {
-  color: #666;
+  // color: #666;
   opacity: 1;
 }
 
@@ -70,4 +70,21 @@ ol {
 strong,
 b {
   font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
 }
