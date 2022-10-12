@@ -1,7 +1,12 @@
+include ../button/button 
+
 mixin slide(title, descr, img)
     .swiper-slide.my-slide
         .my-slide__left
             h2(class='my-slide__title') #{title}
             .my-slide__descr #{descr}
+            .my-slide__btn
+                +button('small', 'blue-green')
+                    | Подробнее
         .my-slide__right 
             img(src=img, alt="" class="my-slide__img")

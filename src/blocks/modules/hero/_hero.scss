@@ -9,39 +9,28 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex: 0 1 85%;
   }
 
   &__item {
-    flex: 0 1 20%;
+    flex: 0 1 auto;
     text-align: center;
   }
 
   &__item:nth-child(1) {
-    padding-left: 36px;
+    padding-left: 8px;
   }
 
   &__item:nth-child(2) {
-    padding-left: 31px;
-  }
-
-  &__item:nth-child(3) {
-    padding-left: 45px;
-  }
-
-  &__item:nth-child(4) {
-    padding-left: 15px;
+    padding-left: 3px;
   }
 
   &__item:nth-child(5) {
-    padding-right: 30px;
+    padding-right: 14px;
   }
 
   &__link {
-    font-family: 'Gilroy';
-    font-style: normal;
-    font-weight: 500;
     font-size: 18px;
     line-height: 150%;
     color: #ffffff;
@@ -53,4 +42,63 @@
     margin-top: -6px;
   }
 
+  .swiper {
+    position: relative;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+
+  .swiper-button-prev {
+    left: 385px;
+    bottom: 60px;
+    background-image: url('../../../img/hero/arrow-left.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .swiper-button-next {
+    left: 444px;
+    bottom: 60px;
+    background-image: url('../../../img/hero/arrow-right.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .my-pagination {
+    width: 100%;
+    padding-left: 14px;
+    display: flex;
+
+    &__item {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      font-family: 'Gilroy Medium';
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 150%;
+      text-align: center;
+      color: #ffffff;
+      background: #00868a;
+      cursor: pointer;
+    }
+
+    &__item:nth-child(1) {
+      flex: 0 1 650px;
+    }
+
+    &__item:nth-child(2) {
+      flex: 0 1 320px;
+    }
+
+    &__item:nth-child(3) {
+      flex: 0 1 330px;
+    }
+  }
 }

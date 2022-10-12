@@ -1,4 +1,44 @@
 .my-slide {
-    display: flex;
+  padding-left: 15px;
 
+  &:first-child {
+    display: flex;
+  }
+
+  &:not(:first-child) {
+    display: none;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -2px;
+  }
+
+  &__title {
+    font-family: 'Gilroy Bold';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    color: #ffffff;
+  }
+
+  &__descr {
+    padding-right: 120px;
+    padding-top: 20px;
+    font-family: 'Gilroy Medium';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #ffffff;
+  }
+
+  &__btn {
+    padding-top: 40px;
+  }
+
+  &__right {
+    max-height: 533px;
+  }
 }

@@ -1,0 +1,84 @@
+.about {
+  padding-top: 80px;
+
+  &__content {
+    display: flex;
+    width: 100%;
+    padding-left: 14px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 40%;
+    max-height: 580px;
+    background: #00868a;
+  }
+
+  &__text {
+    padding-left: 40px;
+    padding-top: 35px;
+  }
+
+  &__ticet {
+    width: 125px;
+    height: 40px;
+    padding: 9px 15px 10px;
+    background: #4fbfa5;
+    font-family: 'Gilroy Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+  }
+
+  &__title {
+    padding-top: 30px;
+    font-family: 'Gilroy Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 150%;
+    color: #ffffff;
+  }
+
+  &__btn {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 70px;
+    padding-top: 13px;
+    font-family: 'Gilroy Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 50px;
+      height: 40px;
+      border: 1px solid #fff;
+      cursor: pointer;
+      background-image: url('../../../img/hero/arrow-right.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 22px;
+    }
+  }
+
+  &__img {
+    padding-top: 33px;
+  }
+
+  &__right {
+    flex: 0 1 60%;
+  }
+}
