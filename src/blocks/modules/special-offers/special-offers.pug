@@ -1,0 +1,11 @@
+include ../card/card 
+
+- var specialoffersArr = [{img: "../../../img/special-offers/special-offers-1.jpg", title: "Лазерное и фотоомоложение"}, {img: "../../../img/special-offers/special-offers-2.jpg", title: "Лазерное и фотоомоложение"}, {img: "../../../img/special-offers/special-offers-3.jpg", title: "Лазерное и фотоомоложение"}, {img: "../../../img/special-offers/special-offers-4.jpg", title: "Лазерное и фотоомоложение"}];
+
+section.special-offers
+    .special-offers__backgr 
+    .special-offers__title.container Актуальные спецпредложения
+    ul.special-offers__list.container
+        each val in specialoffersArr 
+            li.special-offers__item     
+                +card(val.img, val.title)

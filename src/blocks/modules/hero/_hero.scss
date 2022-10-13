@@ -46,29 +46,17 @@
     position: relative;
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: absolute;
-    width: 60px;
-    height: 50px;
-    border: 1px solid #fff;
-    cursor: pointer;
-  }
 
   .swiper-button-prev {
+    @include btn-white-border(60px, 50px, "../../../img/hero/arrow-left.svg");
     left: 385px;
     bottom: 60px;
-    background-image: url('../../../img/hero/arrow-left.svg');
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   .swiper-button-next {
+    @include btn-white-border(60px, 50px, "../../../img/hero/arrow-right.svg");
     left: 444px;
     bottom: 60px;
-    background-image: url('../../../img/hero/arrow-right.svg');
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   .my-pagination {

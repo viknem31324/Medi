@@ -1,0 +1,10 @@
+@mixin  btn-white-border($width, $height, $img) {
+    position: absolute;
+    width: $width;
+    height: $height;
+    border: 1px solid #fff;
+    cursor: pointer;
+    background-image: url($img);
+    background-position: center;
+    background-repeat: no-repeat;
+}

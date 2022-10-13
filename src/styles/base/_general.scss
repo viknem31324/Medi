@@ -60,6 +60,7 @@ body {
   padding: 0;
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  color: $black;
 }
 
 ul,
@@ -87,4 +88,16 @@ a {
 .container {
   max-width: 1310px;
   margin: 0 auto;
+}
+
+.ticet {
+  display: inline;
+  padding: 9px 15px 10px;
+  background: $light-green;
+  font-family: 'Gilroy Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: $white;
 }

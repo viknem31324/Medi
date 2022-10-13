@@ -1,10 +1,26 @@
-section(class='about container')
+- var aestheticsArr = [{age: "78", desc: "Современных центра в странах СНГ"}, {age: "78", desc: "Современных центра в странах СНГ"}, {age: "78", desc: "Современных центра в странах СНГ"}]
+
+section.about.container
     .about__content 
-        .about__left 
-            .about__text
-                .about__ticet Инновации
-                h3(class='about__title') Мы практикуем новый курс процедур аппаратной косметологии
-                .about__btn Подробнее
-            .about__img
+        .about__left.innovations
+            .innovations__text
+                .innovations__ticet.ticet Инновации
+                h3.innovations__title Мы практикуем новый курс процедур аппаратной косметологии
+                .innovations__btn Подробнее
+            .innovations__img
                 img(src="../../../img/about/about-photo.jpg", alt="")
-        .about__right
+        .about__right.aesthetics 
+            .aesthetics__ticet.ticet Эстетика красоты
+            .aesthetics__block
+                ul.aesthetics__list
+                    each val in aestheticsArr
+                        li.aesthetics__item 
+                            span #{val.age}
+                            span #{val.desc}
+                .aesthetics__graph
+                    span 20
+                    div
+                        div Уникальных патентов
+                        div в области косметологии
+                .aesthetics__patent
+                    img(src="../../../img/about/patent.svg",  alt="")
