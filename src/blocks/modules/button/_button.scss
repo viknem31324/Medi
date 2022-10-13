@@ -3,49 +3,37 @@
   font-weight: 500;
   border: 0;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline;
   line-height: 1;
 }
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
 .storybook-button--blue-green {
-  color: #ffffff;
-  background: #00868a;
+  color: $white;
+  background: $dark-green;
   text-transform: uppercase;
 }
 .storybook-button--white {
-  color: #000000;
-  background: #fff;
+  color: $black;
+  background: $white;
 }
 .storybook-button--small {
-  width: 163px;
-  height: 50px;
+  padding: 14px 23px 15px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+}
+.storybook-button--medium {
+  padding: 15px 25px 14px;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.05em;
 }
-.storybook-button--medium {
-  width: 175px;
-  height: 40px;
+.storybook-button--large {
+  padding: 9px 15px 10px;
   font-size: 18px;
   line-height: 21px;
 }
-.storybook-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
-}
 .storybook-button--big {
-  width: 270px;
-  height: 40px;
+  padding: 14px 16px 9px;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 17px;
 }

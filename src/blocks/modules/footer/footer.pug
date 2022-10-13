@@ -7,5 +7,20 @@ footer.footer.container
                 li.menu__item 
                     ul.list-item
                         each a in val   
-                            li.list-item__item #{a}
+                            li.list-item__item 
+                                a(href="") #{a}
+        .menu__contacts.contacts
+            .contacts__number.number
+                .contacts__prev телефон
+                a.contacts__link(href="tel:+78121234567") +7 (812) 123-45-67
+            .contacts__address.address
+                .contacts__prev адрес
+                .contacts__link Невский пр. 140, пом. 10
+                +button('small', 'blue-green') 
+                    | как проехать ?
+            .contacts__address.address
+                .contacts__prev адрес
+                .contacts__link Большой пр. 12
+                +button('small', 'blue-green') 
+                    | как проехать ?
     .footer__bot
