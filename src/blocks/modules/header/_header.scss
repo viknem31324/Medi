@@ -15,7 +15,6 @@
 
   .logo {
     position: relative;
-    height: 100%;
     padding-top: 7px;
     display: flex;
     align-items: center;
@@ -35,7 +34,6 @@
         width: 81px;
         height: 55px;
         background-image: url('../../../img/header/logo.svg');
-        background-position: 0 0;
         background-size: 81px 55px;
       }
     }
@@ -46,27 +44,36 @@
     justify-content: center;
     align-items: center;
     flex: 0 1 28.6%;
-    height: 100%;
     padding-top: 25px;
     padding-bottom: 25px;
-    border-right: 1px solid #c4c4c4;
+    border-right: 1px solid $grey;
+
+    & a:hover {
+      color: $dark-green;
+      text-shadow: 0 0 1em $dark-green, 0 0 0.2em $dark-green;
+    }
   }
 
-  &__salons {
+  &__select {
     padding-top: 25px;
     padding-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 1 30.5%;
-    border-right: 1px solid #c4c4c4;
+    border-right: 1px solid $grey;
     cursor: pointer;
   }
 
-  .salons__title {
+  .select {
     position: relative;
     margin-left: -34px;
 
+    &:hover {
+      color: $dark-green;
+      text-shadow: 0 0 1em $dark-green, 0 0 0.2em $dark-green;
+      z-index: 100;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -77,12 +84,34 @@
       background-image: url('../../../img/header/arrow-salons.svg');
       background-repeat: no-repeat;
     }
-  }
+    &__list {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      z-index: 100;
+      width: 140px;
+      display: flex;
+      flex-direction: column;
+      background: $dark-green;
 
-  .salons__selection {
-    display: none;
-  }
+      &:hover {
+        color: $dark-green;
+        box-shadow: 0 0 1em $black;
+      }
+    }
 
-  .salons__option {
+    &__item {
+      padding: 5px;
+      text-align: right;
+    }
+
+    &__link {
+      color: $white;
+
+      &:hover {
+        color: $black;
+        opacity: 0.5;
+      }
+    }
   }
 }
