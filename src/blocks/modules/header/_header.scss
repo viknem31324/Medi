@@ -1,9 +1,7 @@
 .header {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   justify-content: space-between;
-  height: 90px;
   padding-left: 13px;
 
   &__left {
@@ -12,32 +10,28 @@
   }
 
   &__right {
-    display: flex;
-    justify-content: space-between;
     flex: 0 1 50%;
   }
 
   .logo {
     position: relative;
     height: 100%;
+    padding-top: 7px;
     display: flex;
     align-items: center;
     flex: 0 1 40.5%;
     justify-content: end;
-    opacity: 0.5;
     border-left: 1px solid #c4c4c4;
     border-right: 1px solid #c4c4c4;
 
     &__link {
-      text-transform: uppercase;
-      font-size: 42px;
-      margin-right: 29px;
+      margin-right: 34px;
 
       &::before {
         content: '';
         position: absolute;
-        top: 20px;
-        left: 40px;
+        top: 18px;
+        left: 37px;
         width: 81px;
         height: 55px;
         background-image: url('../../../img/header/logo.svg');
@@ -53,16 +47,18 @@
     align-items: center;
     flex: 0 1 28.6%;
     height: 100%;
-    opacity: 0.5;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border-right: 1px solid #c4c4c4;
   }
 
   &__salons {
+    padding-top: 25px;
+    padding-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 1 30.5%;
-    opacity: 0.5;
     border-right: 1px solid #c4c4c4;
     cursor: pointer;
   }
@@ -72,14 +68,14 @@
     margin-left: -34px;
 
     &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 118px;
-        width: 20px;
-        height: 20px;
-        background-image: url('../../../img/header/arrow-salons.svg');
-        background-repeat: no-repeat;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 118px;
+      width: 20px;
+      height: 20px;
+      background-image: url('../../../img/header/arrow-salons.svg');
+      background-repeat: no-repeat;
     }
   }
 
@@ -88,72 +84,5 @@
   }
 
   .salons__option {
-  }
-
-  &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 1 60%;
-    opacity: 0.5;
-    border-right: 1px solid #c4c4c4;
-  }
-
-  .btn__icon {
-    width: 25px;
-    height: 17px;
-    padding-right: 35px;
-    padding-bottom: 5px;
-    background-image: url("../../../img/header/sleep.svg");
-    background-repeat: no-repeat;
-  }
-
-  .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-items: stretch;
-    flex: 0 1 40%;
-    opacity: 0.5;
-
-    &__item:first-child {
-        padding-left: 28px;
-        padding-right: 27px;
-        opacity: 0.5;
-        border-right: 1px solid #c4c4c4;
-      }
-
-      &__item:nth-child(2){
-        padding-left: 28px;
-        padding-right: 27px;
-        opacity: 0.5;
-        border-right: 1px solid #c4c4c4;
-      }
-
-      &__item:nth-child(3){
-        padding-left: 28px;
-        padding-right: 29px;
-        opacity: 0.5;
-        border-right: 1px solid #c4c4c4;
-      }
-
-      &__item:nth-child(4){
-        padding-left: 29px;
-        padding-right: 24px;
-        opacity: 0.5;
-        border-right: 1px solid #c4c4c4;
-      }
-
-    &__link {
-        display: flex;
-        align-items: center;
-      width: 100%;
-      height: 100%;
-    }
-
-    &__img {
-      width: 24px;
-      height: 24px;
-    }
   }
 }

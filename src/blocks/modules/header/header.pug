@@ -5,20 +5,13 @@ include ../button/button
 header(class='header container')
     .header__left
         .logo
-            .logo__link(href="/") Medi
+            a.logo__link(href="/")
+                img(src="../../../img/header/medi.svg", alt="")
         .header__number
-            <a href="tel:+71234567890">+7 (123) 456 78 90</a>
+            a(href="tel:+71234567890") +7 (123) 456 78 90
         .header__salons.salons
             .salons__title Наши салоны
             ul(class='salons__selection')
                 li(class='salons__option')
     .header__right
-        .header__btn.btn
-            +button('big', 'blue-green')
-                span(class='btn__icon')
-                | Версия для слабовидящих
-        ul(class='header__social social')
-            each val in socialArr
-                li(class='social__item')
-                    a(class='social__link')
-                        img(class='social__img', src=val, alt="")
+        include ../../components/social/social

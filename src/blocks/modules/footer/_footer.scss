@@ -1,10 +1,10 @@
 .footer {
+  padding-left: 15px;
   &__menu {
     display: flex;
     gap: 80px;
     padding-top: 100px;
-    padding-left: 15px;
-    padding-bottom: 50px;
+    padding-bottom: 64px;
   }
 
   .menu {
@@ -59,9 +59,47 @@
 
         &__address {
           padding-top: 32px;
-          
         }
       }
     }
+  }
+
+  &__bot {
+    display: flex;
+    border: 1px solid #c4c4c4;
+  }
+
+  &__copy {
+    padding-top: 5px;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    flex: 0 1 49.7%;
+    border-right: 1px solid #c4c4c4;
+  }
+
+  .copy {
+    &__text {
+      flex: 0 1 50%;
+      font-family: 'Gilroy Regular';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+    }
+
+    &__politic {
+      margin-left: -4px;
+      flex: 0 1 50%;
+      font-family: 'Gilroy Regular';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      text-align: center;
+      text-decoration-line: underline;
+    }
+  }
+
+  &__social {
+    flex: 0 1 50.4%;
   }
 }
