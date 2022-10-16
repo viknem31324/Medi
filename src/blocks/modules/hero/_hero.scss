@@ -1,5 +1,5 @@
 .hero {
-  background: #4fbfa5;
+  background: $light-green;
 
   &__nav {
     display: flex;
@@ -33,7 +33,12 @@
   &__link {
     font-size: 18px;
     line-height: 150%;
-    color: #ffffff;
+    color: $white;
+
+    &:hover {
+      color: $dark-green;
+      text-shadow: 0 0 1em $dark-green, 0 0 0.2em $dark-green;
+    }
   }
 
   &__btn {
@@ -72,9 +77,15 @@
       font-size: 21px;
       line-height: 150%;
       text-align: center;
-      color: #ffffff;
-      background: #00868a;
+      color: $white;
+      background: $medium-green;
       cursor: pointer;
+
+      &:hover {
+        background: $grey;
+        color: $dark-green;
+        text-shadow: 0 0 1em $dark-green, 0 0 0.2em $dark-green;
+      }
     }
 
     &__item:nth-child(1) {

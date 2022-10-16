@@ -21,9 +21,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
     padding-top: 65px;
-    padding-bottom: 35px;
   }
 
   &__item {
@@ -31,11 +29,21 @@
     line-height: 150%;
     color: $white;
     padding-right: 40px;
+    padding-left: 40px;
     cursor: pointer;
 
     &:not(:last-child) {
       padding-bottom: 70px;
     }
+
+    &:last-child {
+      padding-bottom: 35px;
+    }
+
+    &:hover {
+      background: $dark-green;
+    }
+
   }
 
   &__right {
@@ -58,13 +66,17 @@
     padding-left: 60px;
   }
   .info-list {
-    &__item:not(:first-child) {
+    &__item {
       display: none;
+
+      &--active {
+        display: block;
+      }
     }
 
     &__item ul {
-        padding-right: 60px;
-        padding-left: 21px;
+      padding-right: 60px;
+      padding-left: 21px;
     }
 
     &__title {
@@ -77,7 +89,7 @@
     }
 
     &__desc {
-        position: relative;
+      position: relative;
       font-size: 14px;
       line-height: 150%;
       padding-bottom: 14px;

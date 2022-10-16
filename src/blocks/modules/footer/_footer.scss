@@ -29,6 +29,11 @@
             font-size: 21px;
             line-height: 150%;
           }
+
+          &:hover {
+            color: $dark-green;
+            text-shadow: 0 0 1em $dark-green, 0 0 0.2em $dark-green;
+          }
         }
       }
     }
@@ -66,7 +71,7 @@
 
   &__bot {
     display: flex;
-    border: 1px solid #c4c4c4;
+    border: 1px solid $grey;
   }
 
   &__copy {
@@ -75,7 +80,7 @@
     display: flex;
     align-items: center;
     flex: 0 1 49.7%;
-    border-right: 1px solid #c4c4c4;
+    border-right: 1px solid $grey;
   }
 
   .copy {
@@ -96,6 +101,11 @@
       line-height: 150%;
       text-align: center;
       text-decoration-line: underline;
+
+      &:hover {
+        color: $dark-green;
+        text-shadow: 0 0 1em $dark-green, 0 0 0.2em $dark-green;
+      }
     }
   }
 

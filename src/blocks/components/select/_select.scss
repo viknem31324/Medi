@@ -1,0 +1,53 @@
+.select {
+  position: relative;
+  margin-left: -34px;
+
+  &:hover {
+    color: $dark-green;
+    text-shadow: 0 0 1em $dark-green, 0 0 0.2em $dark-green;
+    z-index: 100;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 121px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../img/header/arrow-salons.svg');
+    background-repeat: no-repeat;
+  }
+  &__list {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 100;
+    width: 140px;
+    display: none;
+    flex-direction: column;
+    background: $dark-green;
+
+    &:hover {
+      color: $dark-green;
+      box-shadow: 0 0 1em $black;
+    }
+
+    &.is-active {
+        display: flex;
+      }
+  }
+
+  &__item {
+    padding: 5px;
+    text-align: right;
+  }
+
+  &__link {
+    color: $white;
+
+    &:hover {
+      color: $black;
+      opacity: 0.5;
+    }
+  }
+}
