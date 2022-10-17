@@ -4,13 +4,15 @@ include ../button/button
 
 
 header.header.container
-    .header__left
-        .logo
-            a.logo__link(href="/")
-                img(src="../../../img/header/medi.svg", alt="")
+    .logo
+        a.logo__link(href="/")
+            img(src="../../../img/header/medi.svg", alt="")
+    .header__nav
         .header__number
             a(href="tel:+71234567890") +7 (123) 456 78 90
         .header__select
             include ../../components/select/select
-    .header__right
-        include ../../components/social/social
+        .header__social
+            include ../../components/social/social
+        .header__burger
+            include ../../components/burger/burger

@@ -1,0 +1,36 @@
+.burger {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border: 1px solid $black;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    &__line {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        border: 1px solid $black;
+        transform: translateY(-50%);
+    }
+
+}
