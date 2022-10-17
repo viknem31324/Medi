@@ -1,5 +1,10 @@
 .my-slide {
-  padding-left: 15px;
+  @include small-tablet {
+    justify-content: center;
+  }
+
+  padding-left: rem(15);
+  display: flex;
 
   &:first-child {
     display: flex;
@@ -10,35 +15,97 @@
   }
 
   &__left {
+    @include tablet {
+      align-items: center;
+      padding-bottom: 30px;
+    }
+
+    @include small-tablet {
+      justify-content: space-between;
+      // flex-direction: row;
+      flex: 0 1 100%;
+      padding-bottom: 80px;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 0 1 40%;
     margin-top: -2px;
+  }
+  &__block {
+    @include small-tablet {
+      flex: 0 1 60%;
+    }
+
+    display: flex;
+    flex-direction: column;
+    
   }
 
   &__title {
+    @include tablet {
+      font-size: rem(30);
+    }
+
+    @include small-tablet {
+      text-align: center;
+    }
+
     font-family: 'Gilroy Bold';
     font-weight: 700;
-    font-size: 48px;
+    font-size: rem(48);
     line-height: 150%;
     color: $white;
   }
 
   &__descr {
-    padding-right: 120px;
-    padding-top: 20px;
+    @include desktop {
+      padding-right: 30px;
+    }
+
+    @include tablet {
+      padding-right: 0px;
+    }
+
+    @include small-tablet {
+     padding-left: 20px;
+     padding-right: 20px;
+    }
+
+    padding-right: rem(120);
+    padding-top: rem(20);
     font-family: 'Gilroy Medium';
     font-weight: 500;
-    font-size: 14px;
+    font-size: rem(14);
     line-height: 150%;
     color: $white;
   }
 
   &__btn {
-    padding-top: 40px;
+    @include tablet {
+      padding-top: rem(10);
+    }
+
+    @include small-tablet {
+      flex: 0 1 40%;
+      text-align: center;
+    }
+
+    padding-top: rem(40);
   }
 
   &__right {
+    @include small-tablet {
+      display: none;
+    }
+
+    padding-left: rem(31);
     max-height: 533px;
+    flex: 0 1 60%;
+  }
+
+  &__img {
+    max-width: 100%;
   }
 }

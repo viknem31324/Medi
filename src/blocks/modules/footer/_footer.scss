@@ -1,32 +1,45 @@
 .footer {
   padding-left: 15px;
   &__menu {
+    @include desktop {
+      justify-content: center;
+    }
+
     display: flex;
-    gap: 80px;
-    padding-top: 100px;
-    padding-bottom: 64px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: rem(100);
+    padding-bottom: rem(64);
   }
 
   .menu {
     &__list {
+      @include desktop {
+        justify-content: center;
+      }
+
+      @include medium-tablet {
+        flex: 0 1 100%;
+      }
+
       display: flex;
       flex-wrap: wrap;
-      column-gap: 192px;
-      row-gap: 16px;
+      column-gap: rem(192);
+      row-gap: rem(16);
       flex: 0 1 70%;
     }
 
     &__item {
       .list-item {
         &__item {
-          font-size: 14px;
+          font-size: rem(14);
           line-height: 150%;
-          padding-bottom: 15px;
+          padding-bottom: rem(15);
 
           &:first-child {
-            padding-bottom: 19px;
+            padding-bottom: rem(19);
             font-weight: 700;
-            font-size: 21px;
+            font-size: rem(21);
             line-height: 150%;
           }
 
@@ -39,14 +52,31 @@
     }
 
     &__contacts {
-      flex: 0 1 20%;
-      padding-top: 10px;
-      padding-left: 2px;
+      @include medium-tablet {
+        flex: 0 1 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        column-gap: rem(30);
+        padding-top: rem(20);
+        padding-left: 0px;
+      }
+
+      @include small-tablet {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+      }
+
+      flex: 0 1 24%;
+      min-width: 240px;
+      padding-top: rem(10);
+      padding-left: rem(5);
 
       .contacts {
         &__prev {
-          padding-bottom: 10px;
-          font-size: 11px;
+          padding-bottom: rem(10);
+          font-size: rem(11);
           line-height: 150%;
           letter-spacing: 0.05em;
           text-transform: uppercase;
@@ -54,16 +84,31 @@
         }
 
         &__link {
-          padding-bottom: 14px;
+          padding-bottom: rem(14);
           font-family: 'Gilroy Bold';
           font-weight: 700;
-          font-size: 21px;
+          font-size: rem(21);
           line-height: 150%;
           font-style: normal;
         }
 
+        &__number {
+          @include medium-tablet {
+            text-align: center;
+          }
+        }
+
         &__address {
-          padding-top: 32px;
+          @include medium-tablet {
+            text-align: center;
+            padding-top: 0px;
+          }
+
+          @include small-tablet {
+            flex-wrap: wrap;
+          }
+
+          padding-top: rem(32);
         }
       }
     }
@@ -75,8 +120,14 @@
   }
 
   &__copy {
-    padding-top: 5px;
-    padding-left: 24px;
+    @include desktop {
+      flex: 0 1 100%;
+      padding-top: rem(20);
+      padding-bottom: rem(20);
+    }
+
+    padding-top: rem(5);
+    padding-left: rem(24);
     display: flex;
     align-items: center;
     flex: 0 1 49.7%;
@@ -88,7 +139,7 @@
       flex: 0 1 50%;
       font-family: 'Gilroy Regular';
       font-weight: 400;
-      font-size: 12px;
+      font-size: rem(12);
       line-height: 150%;
     }
 
@@ -97,7 +148,7 @@
       flex: 0 1 50%;
       font-family: 'Gilroy Regular';
       font-weight: 400;
-      font-size: 12px;
+      font-size: rem(12);
       line-height: 150%;
       text-align: center;
       text-decoration-line: underline;
@@ -110,6 +161,10 @@
   }
 
   &__social {
+    @include desktop {
+      display: none;
+    }
+
     flex: 0 1 50.4%;
   }
 }

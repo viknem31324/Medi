@@ -2,13 +2,24 @@
   background: $light-green;
 
   &__nav {
+    @include desktop {
+      gap: rem(20);
+      justify-content: center;
+    }
+
     display: flex;
-    padding-top: 30px;
-    padding-bottom: 23px;
+    flex-wrap: wrap;
+    padding-top: rem(30);
+    padding-bottom: rem(23);
   }
 
   &__list {
+    @include tablet {
+      gap: rem(20);
+    }
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     flex: 0 1 85%;
   }
@@ -19,19 +30,19 @@
   }
 
   &__item:nth-child(1) {
-    padding-left: 8px;
+    padding-left: rem(8);
   }
 
   &__item:nth-child(2) {
-    padding-left: 3px;
+    padding-left: rem(3);
   }
 
   &__item:nth-child(5) {
-    padding-right: 14px;
+    padding-right: rem(14);
   }
 
   &__link {
-    font-size: 18px;
+    font-size: rem(18);
     line-height: 150%;
     color: $white;
 
@@ -43,38 +54,59 @@
 
   &__btn {
     flex: 0 1 15%;
-    padding-left: 12px;
-    margin-top: -6px;
+    padding-left: rem(12);
+    margin-top: rem(-6);
   }
 
   .swiper {
     position: relative;
   }
 
-
   .swiper-button-prev {
-    @include btn-white-border(60px, 50px, "../../../img/hero/arrow-left.svg");
-    left: 385px;
-    bottom: 60px;
+    @include btn-white-border(60px, 50px, '../../../img/hero/arrow-left.svg');
+
+    @include medium-tablet {
+      left: 10px;
+      bottom: 10px;
+    }
+
+    left: rem(385);
+    bottom: rem(60);
   }
 
   .swiper-button-next {
-    @include btn-white-border(60px, 50px, "../../../img/hero/arrow-right.svg");
-    left: 444px;
-    bottom: 60px;
+    @include btn-white-border(60px, 50px, '../../../img/hero/arrow-right.svg');
+
+    @include medium-tablet {
+      left: 80px;
+      bottom: 10px;
+    }
+
+    left: rem(444);
+    bottom: rem(60);
   }
 
   .my-pagination {
+    @include mobile {
+      display: none;
+    }
+
     width: 100%;
-    padding-left: 14px;
+    padding-left: rem(14);
     display: flex;
 
     &__item {
-      padding-top: 24px;
-      padding-bottom: 24px;
+      @include tablet {
+        padding-top: rem(14);
+        padding-bottom: rem(14);
+        font-size: rem(18);
+      }
+
+      padding-top: rem(24);
+      padding-bottom: rem(24);
       font-family: 'Gilroy Medium';
       font-weight: 500;
-      font-size: 21px;
+      font-size: rem(21);
       line-height: 150%;
       text-align: center;
       color: $white;

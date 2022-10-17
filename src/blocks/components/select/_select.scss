@@ -1,6 +1,6 @@
 .select {
   position: relative;
-  margin-left: -34px;
+  margin-left: rem(-34);
 
   &:hover {
     color: $dark-green;
@@ -11,7 +11,7 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 121px;
+    left: rem(121);
     width: 20px;
     height: 20px;
     background-image: url('../../../img/header/arrow-salons.svg');

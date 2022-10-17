@@ -5,6 +5,12 @@
   cursor: pointer;
   display: inline;
   line-height: 1;
+
+  &:hover {
+    color: $dark-green;
+    text-shadow: 0 0 1em $dark-green, 0 0 0.2em $dark-green;
+    background-color: $grey;
+  }
 }
 .storybook-button--blue-green {
   color: $white;
@@ -16,24 +22,25 @@
   background: $white;
 }
 .storybook-button--small {
-  padding: 14px 23px 15px;
-  font-size: 14px;
+  padding: rem(14) rem(23) rem(15);
+  font-size: rem(14);
   line-height: 16px;
   letter-spacing: 0.05em;
 }
 .storybook-button--medium {
-  padding: 15px 25px 14px;
-  font-size: 18px;
+  padding: rem(15) rem(25) rem(14);
+  font-size: rem(18);
   line-height: 21px;
   letter-spacing: 0.05em;
 }
 .storybook-button--large {
-  padding: 9px 15px 10px;
-  font-size: 18px;
+  padding: rem(9) rem(15) rem(10);
+  font-size: rem(18);
   line-height: 21px;
+  min-width: 175px;
 }
 .storybook-button--big {
-  padding: 14px 16px 9px;
-  font-size: 14px;
+  padding: rem(14) rem(16) rem(9);
+  font-size: rem(14);
   line-height: 17px;
 }

@@ -1,8 +1,12 @@
 .news {
+  @include small-tablet {
+    flex-direction: column;
+  }
+
   position: relative;
   display: flex;
-  padding-top: 81px;
-  padding-left: 14px;
+  padding-top: rem(81);
+  padding-left: rem(14);
 
   &__left {
     flex: 0 1 40.6%;
@@ -13,31 +17,43 @@
 
   &__ticet {
     max-width: 101px;
-    margin-top: 35px;
-    margin-left: 40px;
+    margin-top: rem(35);
+    margin-left: rem(40);
     background: $dark-green;
   }
 
   &__list {
+    @include small-tablet {
+      padding-top: rem(10);
+    }
+
     display: flex;
     flex-direction: column;
-    padding-top: 65px;
+    padding-top: rem(65);
   }
 
   &__item {
-    font-size: 18px;
+    @include medium-tablet {
+      padding-right: rem(5);
+    }
+
+    font-size: rem(18);
     line-height: 150%;
     color: $white;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: rem(40);
+    padding-left: rem(40);
     cursor: pointer;
 
     &:not(:last-child) {
-      padding-bottom: 70px;
+      @include medium-tablet {
+        padding-bottom: rem(10);
+      }
+
+      padding-bottom: rem(70);
     }
 
     &:last-child {
-      padding-bottom: 35px;
+      padding-bottom: rem(35);
     }
 
     &:hover {
@@ -62,8 +78,12 @@
   }
 
   &__container-block {
-    padding-top: 35px;
-    padding-left: 60px;
+    @include medium-tablet {
+      padding-left: rem(10);
+    }
+
+    padding-top: rem(35);
+    padding-left: rem(60);
   }
   .info-list {
     &__item {
@@ -75,24 +95,24 @@
     }
 
     &__item ul {
-      padding-right: 60px;
-      padding-left: 21px;
+      padding-right: rem(60);
+      padding-left: rem(21);
     }
 
     &__title {
       font-family: 'Gilroy Bold';
       font-style: normal;
       font-weight: 700;
-      font-size: 24px;
+      font-size: rem(24);
       line-height: 150%;
-      padding-bottom: 25px;
+      padding-bottom: rem(25);
     }
 
     &__desc {
       position: relative;
-      font-size: 14px;
+      font-size: rem(14);
       line-height: 150%;
-      padding-bottom: 14px;
+      padding-bottom: rem(14);
 
       &::before {
         content: '';

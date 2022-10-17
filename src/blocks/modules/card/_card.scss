@@ -1,35 +1,44 @@
 .card {
+  position: relative;
+
+  &__ticet {
+    position: absolute;
+    left: 30.5px;
+    top: 31px;
+  }
+
+  &__img {
+    max-height: 230px;
+  }
+
+  &__block {
     position: relative;
+    display: flex;
+    padding: rem(26) rem(30);
+    background: $dark-green;
+  }
 
-    &__ticet {
-        position: absolute;
-        left: 30.5px;
-        top: 31px;
+  &__title {
+    @include mobile {
+      font-size: rem(18);
     }
 
-    &__img {
-        max-height: 230px;
+    font-family: 'Gilroy Bold';
+    font-weight: 700;
+    font-size: rem(21);
+    line-height: 150%;
+    color: $white;
+  }
+
+  &__btn {
+    @include btn-white-border(50px, 40px, '../../../img/hero/arrow-right.svg');
+    @include mobile {
+      right: 10px;
+      top: 10px;
     }
 
-    &__block {
-        position: relative;
-        display: flex;
-        padding: 26px 30px;
-        background: $dark-green;
-    }
-
-    &__title {
-        font-family: 'Gilroy Bold';
-        font-weight: 700;
-        font-size: 21px;
-        line-height: 150%;
-        color: $white;
-    }
-
-    &__btn {
-        @include btn-white-border(50px, 40px, "../../../img/hero/arrow-right.svg");
-        right: 30px;
-        top: 37px;
-        background-size: 22px;
-    }
+    right: rem(30);
+    top: rem(37);
+    background-size: 22px;
+  }
 }

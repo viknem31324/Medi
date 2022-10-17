@@ -36,6 +36,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-family: 'Gilroy Medium';
+  font-size: rem(16);
   margin: 0;
   padding: 0;
   text-size-adjust: 100%;
@@ -61,7 +62,7 @@ a {
 
 .wrapper {
   // max-width: 1920px;
-  
+  min-width: 375px;
 }
 
 .container {
@@ -71,12 +72,26 @@ a {
 
 .ticet {
   display: inline;
-  padding: 9px 15px 10px;
+  padding: rem(9) rem(15) rem(10);
   background: $light-green;
   font-family: 'Gilroy Medium';
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: rem(18);
   line-height: 21px;
   color: $white;
+}
+
+html {
+  @include tablet {
+    font-size: 15px;
+  }
+
+  @include small-tablet {
+    font-size: 14px;
+  }
+
+  @include mobile {
+    font-size: 13px;
+  }
 }

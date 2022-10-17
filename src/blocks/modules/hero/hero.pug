@@ -2,15 +2,15 @@ include ../button/button
 include ../slide/slide 
 
 - var slideArr = [{title: "Косметология", descr: "Современный мир диктует новые каноны жизни: ухоженное лицо и тело, стройная, подтянутая фигура — сегодня это неотъемлемые черты привлекательной внешности, характеризующие человека благополучного и успешного.", img: "../../../img/hero/slide/slide-1.svg"}, {title: "Пластическая хирургия", descr: "Современный мир диктует новые каноны жизни: ухоженное лицо и тело, стройная, подтянутая фигура — сегодня это неотъемлемые черты привлекательной внешности, характеризующие человека благополучного и успешного.", img: "../../../img/hero/slide/slide-1.svg"}, {title: "Стоматология", descr: "Современный мир диктует новые каноны жизни: ухоженное лицо и тело, стройная, подтянутая фигура — сегодня это неотъемлемые черты привлекательной внешности, характеризующие человека благополучного и успешного.", img: "../../../img/hero/slide/slide-1.svg"}, {title: "Лазерная медицина", descr: "Современный мир диктует новые каноны жизни: ухоженное лицо и тело, стройная, подтянутая фигура — сегодня это неотъемлемые черты привлекательной внешности, характеризующие человека благополучного и успешного.", img: "../../../img/hero/slide/slide-1.svg"}, {title: "Контакты", descr: "Современный мир диктует новые каноны жизни: ухоженное лицо и тело, стройная, подтянутая фигура — сегодня это неотъемлемые черты привлекательной внешности, характеризующие человека благополучного и успешного.", img: "../../../img/hero/slide/slide-1.svg"}]
-- var heroNavArr = ["Косметология", "Пластическая хирургия", "Стоматология", "Лазерная медицина", "Контакты"]
+- var heroNavArr = [{title: "Косметология", link: "#kosm"}, {title: "Пластическая хирургия", link: "#plast"}, {title: "Стоматология", link: "#stom"}, {title: "Лазерная медицина", link: "#lazer"}, {title: "Контакты", link: "#contk"}];
 - var aboutNavArr = ["Комплексные процедуры", "Центр обучения", "VIP клиентам"]
 
-section(class='hero')
+section.hero
     .hero__nav.container
-        ul(class='hero__list')
+        ul.hero__list
             each val in heroNavArr
-                li(class='hero__item')
-                    a(class='hero__link') #{val}
+                li.hero__item
+                    a.hero__link(href=val.link) #{val.title}
         .hero__btn 
             +button('large', 'white')
                 | Запись на прием
@@ -21,7 +21,7 @@ section(class='hero')
                     +slide(val.title, val.descr, val.img)
             .swiper-button-prev
             .swiper-button-next
-        ul(class='.swiper-pagination my-pagination')
+        ul.swiper-pagination.my-pagination
             each val in aboutNavArr
-                li(class='my-pagination__item') #{val}
+                li.my-pagination__item #{val}
                         
