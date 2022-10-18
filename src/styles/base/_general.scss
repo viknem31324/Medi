@@ -61,8 +61,26 @@ a {
 }
 
 .wrapper {
+  position: relative;
   // max-width: 1920px;
   min-width: 375px;
+}
+
+.content-visibl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $black;
+  opacity: 0.3;
+  z-index: 300;
+  display: none;
+}
+
+
+.content-visibl--active {
+  display: block;
 }
 
 .container {
@@ -94,4 +112,8 @@ html {
   @include mobile {
     font-size: 13px;
   }
+}
+
+.stop-scrol {
+  overflow: hidden;
 }

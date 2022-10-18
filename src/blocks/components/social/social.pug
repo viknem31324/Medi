@@ -1,10 +1,10 @@
 .social
     .social__btn.btn
         +button('big', 'blue-green')
-            span(class='btn__icon')
+            span.btn__icon
             | Версия для слабовидящих
-    ul(class='social__list')
+    ul.social__list
         each val in socialArr
-            li(class='social__item')
-                a(class='social__link')
-                    img(class='social__img', src=val, alt="")
+            li.social__item
+                a.social__link
+                    img.social__img(src=val, alt="")

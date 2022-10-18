@@ -5,6 +5,9 @@
   flex: 0 1 40%;
 
   &__btn {
+    @include desktop {
+      border-right: 0;
+    }
     padding-top: rem(25);
     padding-bottom: rem(25);
     display: flex;

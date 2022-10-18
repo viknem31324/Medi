@@ -4,7 +4,7 @@ const infoTarget = document.querySelectorAll('.info-list__item')!;
     if(newsTarget){
         newsTarget.forEach((item, index) => {
             
-            item.addEventListener('click', (event) => {
+            item.addEventListener('click', () => {
                 infoTarget.forEach(item => {
                     item.classList.remove('info-list__item--active')
                 })

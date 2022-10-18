@@ -1,7 +1,7 @@
 - var selectArr = [{title: "Салон 1", link: "/"}, {title: "Салон 2", link: "/"}, {title: "Салон 3", link: "/"}, {title: "Салон 4", link: "/"}, {title: "Салон 5", link: "/"}];
 
 .select Наши салоны
-    .select__list   
-        each val in selectArr
-            .select__item   
-                a.select__link(href=val.link) #{val.title}
+.select__list   
+    each val in selectArr
+        .select__item   
+            a.select__link(href=val.link) #{val.title}
