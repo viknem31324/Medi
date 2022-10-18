@@ -92,5 +92,7 @@
     "pre-commit": "npx lint-staged",
     "commit-msg": "npx commitlint -e"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^8.4.4"
+  }
 }

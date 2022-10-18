@@ -6,14 +6,6 @@
   padding-left: rem(15);
   display: flex;
 
-  &:first-child {
-    display: flex;
-  }
-
-  &:not(:first-child) {
-    display: none;
-  }
-
   &__left {
     @include tablet {
       align-items: center;
@@ -22,7 +14,6 @@
 
     @include small-tablet {
       justify-content: space-between;
-      // flex-direction: row;
       flex: 0 1 100%;
       padding-bottom: 80px;
     }
@@ -33,6 +24,7 @@
     flex: 0 1 40%;
     margin-top: -2px;
   }
+
   &__block {
     @include small-tablet {
       flex: 0 1 60%;

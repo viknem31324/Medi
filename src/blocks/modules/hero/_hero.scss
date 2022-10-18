@@ -70,8 +70,8 @@
       bottom: 10px;
     }
 
-    left: rem(385);
-    bottom: rem(60);
+    left: 385px;
+    top: 423px;
   }
 
   .swiper-button-next {
@@ -82,8 +82,16 @@
       bottom: 10px;
     }
 
-    left: rem(444);
-    bottom: rem(60);
+    left: 444px;
+    top: 423px;
+  }
+  .swiper-button-prev::after, 
+  .swiper-button-next::after {
+    content: '';
+  }
+
+  .swiper-pagination {
+    bottom: -30px;
   }
 
   .my-pagination {
