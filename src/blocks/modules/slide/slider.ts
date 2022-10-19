@@ -1,16 +1,18 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
+const arr: any = ["Комплексные процедуры", "Центр обучения", "VIP клиентам"];
+
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination],
-  // direction: 'vertical',
-  // loop: true,
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (arr[index]) + '</span>';
+    },
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
