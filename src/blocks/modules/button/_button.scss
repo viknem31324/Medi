@@ -1,10 +1,12 @@
 .storybook-button {
+  display: inline;
+
   font-family: 'Gilroy Medium';
   font-weight: 500;
+  line-height: 1;
+
   border: 0;
   cursor: pointer;
-  display: inline;
-  line-height: 1;
 
   &:hover {
     color: $dark-green;
@@ -23,24 +25,28 @@
 }
 .storybook-button--small {
   padding: rem(14) rem(23) rem(15);
+
   font-size: rem(14);
   line-height: 16px;
   letter-spacing: 0.05em;
 }
 .storybook-button--medium {
   padding: rem(15) rem(25) rem(14);
+
   font-size: rem(18);
   line-height: 21px;
   letter-spacing: 0.05em;
 }
 .storybook-button--large {
   padding: rem(9) rem(15) rem(10);
+
   font-size: rem(18);
   line-height: 21px;
   min-width: 175px;
 }
 .storybook-button--big {
   padding: rem(14) rem(16) rem(9);
+  
   font-size: rem(14);
   line-height: 17px;
 }

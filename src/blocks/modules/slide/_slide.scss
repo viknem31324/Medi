@@ -3,8 +3,8 @@
     justify-content: center;
   }
 
-  padding-left: rem(15);
   display: flex;
+  padding-left: rem(15);
 
   &__left {
     @include tablet {
@@ -67,6 +67,7 @@
 
     padding-right: rem(120);
     padding-top: rem(20);
+
     font-family: 'Gilroy Medium';
     font-weight: 500;
     font-size: rem(14);
@@ -92,9 +93,9 @@
       display: none;
     }
 
+    flex: 0 1 60%;
     padding-left: rem(31);
     max-height: 533px;
-    flex: 0 1 60%;
   }
 
   &__img {

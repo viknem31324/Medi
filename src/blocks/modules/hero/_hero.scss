@@ -70,9 +70,10 @@
     }
 
     @include small-mobile {
-      display: block;
       left: 114px;
       top: 210px;
+
+      display: block;
     }
 
 
@@ -88,9 +89,10 @@
     }
 
     @include small-mobile {
-      display: block;
       left: 214px;
       top: 210px;
+
+      display: block;
     }
 
     left: 444px;
@@ -108,6 +110,7 @@
 
     position: static;
     z-index: 1000;
+
     padding-left: rem(14);
     display: flex;
   }
@@ -121,22 +124,25 @@
     @include tablet {
       padding-top: rem(14);
       padding-bottom: rem(14);
+
       font-size: rem(18);
     }
 
-    padding-top: rem(24);
-    padding-bottom: rem(24);
-    margin: 0;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+    margin: 0;
+
     font-family: 'Gilroy Medium';
     font-weight: 500;
     font-size: rem(21);
     line-height: 150%;
     text-align: center;
     color: $white;
+
     background: $medium-green;
     border-radius: 0;
     opacity: 1;

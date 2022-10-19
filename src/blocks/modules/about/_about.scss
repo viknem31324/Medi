@@ -21,6 +21,7 @@
     flex-direction: column;
     flex: 0 1 41%;
     max-height: 580px;
+
     background: $dark-green;
   }
 
@@ -32,6 +33,7 @@
 
     &__title {
       padding-top: rem(40);
+
       font-family: 'Gilroy Medium';
       font-style: normal;
       font-weight: 500;
@@ -42,12 +44,14 @@
 
     &__btn {
       @include btn-white-border(50px, 40px, '../../../img/hero/arrow-right.svg');
-      left: 0;
-        top: 5px;
-        background-size: 22px;
+
       position: relative;
+      left: 0;
+      top: 5px;
+
       margin-top: rem(20);
       margin-bottom: rem(20);
+
       font-family: 'Gilroy Bold';
       font-style: normal;
       font-weight: 700;
@@ -55,12 +59,14 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: $white;
+      background-size: 22px;
 
       &::after {
         content: 'Подробнее';
         position: absolute;
         left: 70px;
         top: 5px;
+
         background-size: 22px;
       }
     }
@@ -86,9 +92,10 @@
     @include desktop {
       display: none;
     }
-    
+
     display: flex;
     flex-direction: column;
+
     padding-left: rem(134);
     padding-top: rem(35);
 
@@ -105,9 +112,11 @@
       position: absolute;
       left: 0;
       bottom: 139px;
-      max-width: 470px;
+
       display: flex;
       align-items: center;
+      max-width: 470px;
+
       font-family: 'Gilroy Medium';
       font-style: normal;
       font-weight: 500;
@@ -117,6 +126,7 @@
 
       & span:first-child {
         padding-right: rem(30);
+
         font-size: rem(96);
         color: $dark-green;
       }
@@ -126,6 +136,7 @@
       display: flex;
       flex-direction: column;
       flex: 0 1 40%;
+      
       padding-top: rem(45);
     }
 
@@ -133,12 +144,14 @@
       display: flex;
       align-items: center;
       max-width: 214px;
+
       font-family: 'Gilroy Medium';
       font-style: normal;
       font-weight: 500;
       font-size: rem(14);
       line-height: 150%;
       color: $black;
+
       opacity: 0.3;
     }
 
@@ -151,14 +164,16 @@
     }
 
     &__item span:first-child {
-      font-size: rem(48);
       padding-right: rem(20);
+
+      font-size: rem(48);
     }
 
     &__patent {
-      flex: 0 1 60%;
       display: flex;
       justify-content: right;
+      flex: 0 1 60%;
+      
       padding-top: rem(23);
 
       & img {

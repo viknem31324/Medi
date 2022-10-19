@@ -1,19 +1,23 @@
 .burger {
     position: relative;
+    z-index: 1000;
+
     width: 30px;
     height: 20px;
     border: none;
     background: transparent;
     cursor: pointer;
-    z-index: 1000;
 
     &::before, &::after {
         content: '';
         position: absolute;
         left: 0;
+
         width: 100%;
         height: 2px;
+
         border: 1px solid $black;
+        
         transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
@@ -29,11 +33,14 @@
         position: absolute;
         left: 0;
         top: 50%;
+
         width: 100%;
         height: 2px;
+
         border: 1px solid $black;
-        transform: translateY(-50%);
         opacity: 1;
+
+        transform: translateY(-50%);
     }
 
     &--active &__line {

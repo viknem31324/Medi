@@ -8,12 +8,14 @@
     @include desktop {
       border-right: 0;
     }
-    padding-top: rem(25);
-    padding-bottom: rem(25);
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 1 60%;
+    padding-top: rem(25);
+    padding-bottom: rem(25);
+
     border-right: 1px solid $grey;
   }
 
@@ -22,6 +24,7 @@
     height: 17px;
     padding-right: 35px;
     padding-bottom: 5px;
+
     background-image: url('../../../img/header/sleep.svg');
     background-repeat: no-repeat;
   }
@@ -38,24 +41,28 @@
     &:first-child {
       padding-left: rem(28);
       padding-right: rem(27);
+
       border-right: 1px solid $grey;
     }
 
     &:nth-child(2) {
       padding-left: rem(28);
       padding-right: rem(27);
+
       border-right: 1px solid $grey;
     }
 
     &:nth-child(3) {
       padding-left: rem(28);
       padding-right: rem(29);
+
       border-right: 1px solid $grey;
     }
 
     &:nth-child(4) {
       padding-left: rem(29);
       padding-right: rem(24);
+      
       border-right: 1px solid $grey;
     }
   }
