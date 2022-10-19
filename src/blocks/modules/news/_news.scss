@@ -29,28 +29,23 @@
 
     display: flex;
     flex-direction: column;
-    padding-top: rem(65);
+    padding-top: 29px;
   }
 
   &__item {
     @include medium-tablet {
       padding-right: rem(5);
+      padding-bottom: rem(10);
     }
 
+    padding-top: 35px;
+    padding-bottom: 35px;
     font-size: rem(18);
     line-height: 150%;
     color: $white;
     padding-right: rem(40);
     padding-left: rem(40);
     cursor: pointer;
-
-    &:not(:last-child) {
-      @include medium-tablet {
-        padding-bottom: rem(10);
-      }
-
-      padding-bottom: rem(70);
-    }
 
     &:last-child {
       padding-bottom: rem(35);
@@ -59,7 +54,10 @@
     &:hover {
       background: $dark-green;
     }
+  }
 
+  .news__item--active {
+    background: $dark-green;
   }
 
   &__right {
